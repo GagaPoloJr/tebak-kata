@@ -3,7 +3,7 @@ let hostname = window.location.hostname;
 if (hostname === "127.0.0.1") {
   hostname = "/tebak.html";
 } else {
-  hostname = window.location.hostname + "/tebak.html";
+  hostname = "/tebak.html";
 }
 
 const startGame = $("#start_game");
