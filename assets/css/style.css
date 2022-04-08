@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+
+html{
+    font-family: 'Ovo', serif;
+}
+body{
+    background: rgb(48, 54, 78);
+
+}
+
+.main__content{
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+    margin: auto;
+    background: rgb(44, 51, 83);
+
+}
+.title__content, .current__word{
+    color: rgb(247, 185, 22);
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#countdown{
+    color: rgb(247, 185, 22);
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.circle__content{
+    position: absolute; /*Can also be `fixed`*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+   
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: rgb(247, 185, 22);
+    cursor: pointer;
+   
+}
+
