@@ -13,8 +13,8 @@ const displayWord = $("#current_word");
 
 const next = $("#next");
 const correct = $("#correct");
-
-var words = ["haikal", "nisa", "PWD", "tonight show"];
+let keepRunning = true;
+var words = ["haikal", "nisa", "PWD", "ayam bakar", "timun mas", "legenda", "apa lagi ya"];
 const wordsContainer = [];
 
 const setElementHeight = function () {
@@ -66,8 +66,11 @@ const doCount = function () {
 };
 
 function timer() {
-  timeVar = setInterval(doCount, 1000);
-  return timeVar;
+  if(window.keepRunning){
+    timeVar = setInterval(doCount, 1000);
+    return timeVar;
+  }
+  
 }
 
 // remove item when it shows to website
@@ -86,9 +89,9 @@ const getRandomWords = function (array, current) {
   tempData = tempData[0].innerHTML;
 
   current = removeItemOnce(array, tempData);
-  console.log(current);
 
   if (current.length === 0) {
+    window.keepRunning = false;
     displayWord.html("habis ges");
   }
 
